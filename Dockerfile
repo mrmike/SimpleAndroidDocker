@@ -1,5 +1,7 @@
 from anapsix/alpine-java:8_jdk
 
+LABEL maintainer "Michał Moczulski <moczul@gmail.com>"
+
 # Make wget https working
 RUN apk add --update openssl
 
