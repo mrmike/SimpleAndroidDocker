@@ -2,9 +2,6 @@ from anapsix/alpine-java:8_jdk
 
 LABEL maintainer "Michał Moczulski <moczul@gmail.com>"
 
-# Install git. Required by CircleCi
-RUN apk update && apk upgrade && apk add git
-
 # Install Gradle
 RUN apk add --update openssl \
 	&& wget https://services.gradle.org/distributions/gradle-4.6-bin.zip \
@@ -30,4 +27,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools/bin
 
 RUN yes | sdkmanager --licenses \
 	&& sdkmanager "platforms;android-27" "extras;google;m2repository" "build-tools;27.0.3" --verbose
+
+# Install git, required by CircleCi.
+RUN apk update && apk upgrade && apk add git
 
