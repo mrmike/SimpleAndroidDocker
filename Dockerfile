@@ -26,7 +26,7 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
 ENV PATH ${PATH}:${ANDROID_HOME}/tools/bin
 
 RUN yes | sdkmanager --licenses \
-	&& sdkmanager "platforms;android-27" "extras;google;m2repository" "build-tools;27.0.3" --verbose
+	&& sdkmanager "platforms;android-27" "platform-tools" "extras;google;m2repository" "build-tools;27.0.3" --verbose
 
 # Install git, required by CircleCi.
 RUN apk update && apk upgrade && apk add git
