@@ -2,6 +2,9 @@ from anapsix/alpine-java:8_jdk
 
 LABEL maintainer "Michał Moczulski <moczul@gmail.com>"
 
+# Install git. Required by CircleCi
+RUN apk update && apk upgrade && apk add git
+
 # Install Gradle
 RUN apk add --update openssl \
 	&& wget https://services.gradle.org/distributions/gradle-4.6-bin.zip \
