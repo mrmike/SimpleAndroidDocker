@@ -13,7 +13,7 @@ Image contains basic tools required to build Android applications.
 * Google m2 repository
 ```
 ### Building image
-To build image from `Dockerfile` make sure that Docker is installed and launched and then call
+To build image from [`Dockerfile`](https://github.com/mrmike/SimpleAndroidDocker/blob/master/Dockerfile) make sure that Docker is installed and launched and then call
 ```
 docker build -t simple-android-docker .
 ```
