@@ -13,14 +13,14 @@ Image contains basic tools required to build Android applications.
 * Google m2 repository
 ```
 ### Building image
-To build image from [`Dockerfile`](https://github.com/mrmike/SimpleAndroidDocker/blob/master/Dockerfile) make sure that Docker is installed and launched and then call
+To build an image from [`Dockerfile`](https://github.com/mrmike/SimpleAndroidDocker/blob/master/Dockerfile) make sure that Docker is installed and launched and then call
 ```
 docker build -t simple-android-docker .
 ```
 Instead of `simple-android-docker` you can use whatever name you like.
 
 ### Docker hub
-Image is available on Docker hub: https://hub.docker.com/r/michalmoczulski/simple-android-docker/
+The image is available on Docker hub: https://hub.docker.com/r/michalmoczulski/simple-android-docker/
 To pull an image call
 ```
 docker pull michalmoczulski/simple-android-docker
@@ -36,5 +36,5 @@ docker run --rm  \
 ```
 
 ### Sample project
-There's a sample Android app project showing how this image can be used for Android continous integration. Take a look at https://github.com/mrmike/android-ci-sample
+There's a sample Android app project showing how this image can be used for Android continuous integration. Take a look at https://github.com/mrmike/android-ci-sample
 
